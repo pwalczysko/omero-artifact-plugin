@@ -23,6 +23,7 @@ allprojects {
     tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
         kotlinOptions {
             jvmTarget = JavaVersion.VERSION_1_8.toString()
+            jvmArgs = listOf("--add-opens=java.base/java.util=ALL-UNNAMED")
         }
     }
 }
